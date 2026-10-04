@@ -1,0 +1,95 @@
+/* General page styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111; /* Darker background for the page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Logical size of the canvas */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#score-board {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#canvas-wrapper {
+    position: relative;
+    width: 100%;
+    /* Keep aspect ratio 1:1 */
+    aspect-ratio: 1 / 1;
+}
+
+#game-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Dark canvas background */
+    border: 2px solid white; /* White border */
+    box-sizing: border-box;
+    image-rendering: pixelated; /* Crisp rendering if scaled */
+}
+
+/* UI Overlay styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Keeps overlay within the borders */
+    box-sizing: border-box;
+}
+
+#overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#overlay-title {
+    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#overlay-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+    min-height: 24px; /* Ensure space even if empty */
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
